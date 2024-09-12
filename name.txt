@@ -1,0 +1,38 @@
+def decimal_to_binary(decimal):
+    return bin(decimal)[2:]
+
+def binary_to_decimal(binary):
+    return int(binary, 2)
+
+def decimal_to_hex(decimal):
+    return hex(decimal)[2:]
+
+def hex_to_decimal(hex_num):
+    return int(hex_num, 16)
+
+def main():
+    print("Number Converter")
+    print("1. Decimal to Binary")
+    print("2. Binary to Decimal")
+    print("3. Decimal to Hex")
+    print("4. Hex to Decimal")
+
+    choice = input("Enter your choice (1/2/3/4): ")
+
+    if choice == '1':
+        decimal = int(input("Enter decimal number: "))
+        print(f"Binary: {decimal_to_binary(decimal)}")
+    elif choice == '2':
+        binary = input("Enter binary number: ")
+        print(f"Decimal: {binary_to_decimal(binary)}")
+    elif choice == '3':
+        decimal = int(input("Enter decimal number: "))
+        print(f"Hexadecimal: {decimal_to_hex(decimal)}")
+    elif choice == '4':
+        hex_num = input("Enter hexadecimal number: ")
+        print(f"Decimal: {hex_to_decimal(hex_num)}")
+    else:
+        print("Invalid choice.")
+
+if __name__ == '__main__':
+    main()
